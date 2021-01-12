@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vsak5.live</title>
+  <link rel="stylesheet" href="learn_files/style.css">
+  <!-- <link rel="stylesheet" href="debug.css"> -->
+  <link rel="stylesheet" href="learn_files/bulma.css">
+  <!-- <script src="./mithril-1.1.6.js"></script> -->
+  <!-- <script src="./bss.js"></script> -->
+  <script src="learn_files/feather.js"></script>
+  <style>
+    /* html { box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: inherit; }
+    body,input,button { 
+      font: normal 16px "system-ui", Arial,Verdana;
+      margin: 0;
+    }
+    html, body { height: 100vh; }
+    main { background-color: white; height: 100% } */
+  </style>
+  <style>
+    @keyframes b7865n20 {
+      from {
+        fill: #fff;
+      }
+
+      to {
+        fill: #8f2426;
+      }
+    }
+
+    .b7865n21.b7865n21 {
+      background-color: #ffffff;
+    }
+
+    .b7865n22.b7865n22 {
+      padding: 0 1.5em;
+    }
+
+    .b7865n23.b7865n23 {
+      list-style: disc outside;
+      margin-left: 2em;
+    }
+
+    .b7865n24.b7865n24 {
+      border: 0px;
+      height: 1px;
+      background-color: rgba(255, 154, 59, 1);
+    }
+
+    .b7865n25.b7865n25 {
+      padding: 0px;
+      padding-bottom: 1em;
+    }
+
+    .b7865n26.b7865n26 {
+      list-style: none;
+      margin-left: 1em;
+    }
+
+    .b7865n27.b7865n27 {
+      color: #990000;
+    }
+
+    .b7865n28.b7865n28 {
+      display: flex;
+      position: relative;
+    }
+
+    .b7865n29.b7865n29 {
+      font-weight: 900;
+      font-size: 3em;
+      color: #000000;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (min-width: 801px) {
+      .b7865n29.b7865n29 {
+        font-size: 5em;
+      }
+    }
+
+    .b7865n210.b7865n210 {
+      color: #8f2426;
+    }
+
+    .b7865n211.b7865n211 {
+      position: absolute;
+      font-size: 1.5em;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      opacity: 0;
+      transition: opecity .1s linear;
+    }
+
+    @media (min-width: 801px) {
+      .b7865n211.b7865n211 {
+        font-size: 3.6em;
+      }
+    }
+
+    .b7865n212.b7865n212 {
+      background-color: #ededed;
+    }
+
+    .b7865n213.b7865n213 {
+      display: block;
+      font-size: .9rem;
+      padding: 1em 0;
+      border-bottom: 1px solid #4a4a4a;
+    }
+
+    @media (min-width:801px) {
+      .b7865n213.b7865n213 {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .b7865n213>*+* {
+        padding-top: 2em;
+      }
+    }
+
+    .b7865n214.b7865n214 {
+      height: 100%;
+    }
+
+    .b7865n215.b7865n215 {
+      background-color: #ffffff;
+      padding-bottom: 3em;
+    }
+
+    .b7865n216.b7865n216 {
+      padding: 1.5em;
+    }
+
+    .b7865n217.b7865n217 {
+      padding: 0px;
+    }
+
+    .b7865n218.b7865n218 {
+      margin-left: none;
+    }
+
+    .b7865n219.b7865n219 {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .b7865n220.b7865n220 {
+      font-size: .75rem;
+      color: #666666;
+    }
+
+    .b7865n221.b7865n221 {
+      margin-top: 1em;
+    }
+
+    .b7865n222.b7865n222 {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    @media (min-width:801px) {
+      .b7865n222.b7865n222 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1em;
+      }
+    }
+
+    .b7865n223.b7865n223 {
+      position: relative;
+      width: 100%;
+      height: 0px;
+      padding-bottom: 56.27198%;
+    }
+
+    .b7865n224.b7865n224 {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <script>
+    
+    
+    /*
+    *   Some handy utilities for use in view()s
+    */
+    
+    function linkto(href){
+      return {href: href, oncreate: m.route.link};
+    }
+    
+    function bindProp(obj, propName){
+      return {
+        oninput: m.withAttr("value", function(v){
+          obj[propName] = v;
+        }),
+        value: obj[propName],
+      };
+    }
+    
+    b.helper('measure', b.maxWidth("30em"))
+    b.helper('measureWide', b.maxWidth("34em"))
+    b.helper('measureNarrow', b.maxWidth("20em"))
+    
+    MainComp = function() {
+      function oninit() {
+      }
+      function view(vnode) {
+        return m("main"+b.display("grid").gridTemplateRows("70px 70px 1fr 70px"), [
+        m("i[data-feather='menu']"+b.position("absolute").top(27).right(10)),
+        m("header"+b.display("flex").jc("center").tt("uppercase"),
+        m("h1"+b.fontWeight(900), "Vsak peti otrok")),
+        m("nav"+b.display("flex").flexDirection("column").jc("center").jc("space-around").alignContent("center").bc("salmon")
+        .lineHeight(70)
+        .$nest("a", b.color("#fff"))
+        .$media('(min-width:801px)',
+        b.flexDirection("row"))
+        ,[
+        //m("a", linkto("/article"), "Article list"),
+        m("a", linkto("/article"), "Poslanstvo"),
+        m("a", linkto("/article"), "Pomoč"),
+        m("a", linkto("/article"), "Zgodbe"),
+        m("a", linkto("/article"), "Izobraževanje"),
+        ]),
+        m("section"+b.display("flex").jc("center"), vnode.children),
+        m("footer"+b.bc("#d2d4d6"), "&copy bag")
+        ])
+      }
+      return {oninit:oninit, view:view}
+    }
+    Main = MainComp()
+    
+    
+    HomeComp = function(){
+      function oninit(){
+      }
+      
+      function view(){
+        return m("main" + b.display("flex").jc("center").ai("center").flexDirection("column"),
+        [
+        m("h1"+ b.color("#111111").fontSize("3em"), "Stran začne obratovati 15.12.2018"),
+        m("img", { src: "./assets/vsak5_CoverPhoto.jpg", style: { width: '100%' } })
+        ]
+        //m("img", { src: "./assets/vsak5_ProfilePhoto.jpg", style: { width: '100%', height: '200px' } })
+        //m("img", { src: "./assets/vsak5_CoverPhoto.jpg" })
+        )
+      }
+      
+      return {oninit:oninit, view:view}
+      
+    }
+    
+    var Article = {
+      view: function(vnode) {
+        return m(Main, m("article"+b.measure, "This is article " + vnode.attrs.articleid))
+      }
+    }
+    
+    m.route(document.body, "/article/:articleid", {
+      '/': HomeComp(),
+      '/article/:articleid': Article
+    });
+    
+    feather.replace()
+  </script -->
+
+
+  <script>
+    feather.replace()
+  </script>
+
+  <!-- Code injected by live-server -->
+  <script type="text/javascript">
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    } else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
+
+  <is-fullheight>
+    <div class="title b7865n29">Vsak <span class="b7865n210">5. </span>otrok</div>
+    <div class="boxx b7865n28"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
+        stroke-miterlimit="1.414" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"
+        viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"
+        viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"
+        viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"
+        viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><span id="title" class="b7865n211">Je žrtev spolne zlorabe</span></div>
+    <nav class="navbar">
+      <div class="navbar-menu is-active"><a href="index.html" class="navbar-item is-uppercase">Poslanstvo</a><a
+          href="help.html" class="navbar-item is-uppercase">Pomoč</a><a href="learn.html"
+          class="navbar-item is-uppercase">Izobraževanje</a></div>
+    </nav>
+    <section class="section">
+      <div class="container b7865n21">
+        <columns>
+          <column>
+            <div class="tile is-parent has-text-centered">
+              <h1 class="title is-2 is-uppercase tile is-child is-12">Izobraževanje</h1>
+            </div>
+            <div class="tile is-parent">
+              <div class="tile is-child b7865n22">
+                <h2 class="subtitle is-3">Članki in spletne strani</h2>
+                <ul class="b7865n23">
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://localhost:5500/assets/doc/01-Text_Brosura_Tja%C5%A1a_Horvat_DNK_2019_02_10.pdf"
+                      class="blob">Tjaša Hrovat DNK: Vsebina Zloženke VSAK5.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://localhost:5500/assets/doc/06-2007_MNZ_Policija_SPOLNO_NASILJE.pdf" class="blob">MNZ
+                      Policija: Spolno Nasilje</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://www.portalplus.si/1603/jeseniska-deklica" class="blob">Katja Knez Steinbuch: 'Ena po
+                      riti' je za Slovence nekaj sprejemljivega, normalnega in vzgojnega. Portal Plus, 5. 7. 2016.</a>
+                  </li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://www.rtvslo.si/slovenija/pedofilija-kdo-si-zatiska-oci/255711" class="blob">A. Mu.:
+                      Pedofilija: kdo si zatiska oči? MMC RTV SLO, 19. 4. 2011.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://novice.svet24.si/clanek/novice/slovenija/56c5ff4a86b9b/razgaljanje-intime-pred-raznimi-neznanci"
+                      class="blob">Tina Recek: Mama spolno zlorabljenega otroka: Otrok se je tresel, potil, se me
+                      oklepal. Media 24, 19. 2. 2016.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://www.24ur.com/novice/slovenija/po-taksni-izgubi-ni-clovek-nikoli-vec-isti-grdi-neznanec-v-temni-ulici-je-imel-znan-obraz.html"
+                      class="blob">Natalija Švab: Po takšni izgubi ni človek nikoli več isti: Grdi neznanec v temni
+                      ulici je imel znan obraz. 24ur, 26. 9. 2014.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://www.dnevnik.si/1042725852/ljudje/neza-miklic-dolgoletna-preiskovalka-spolnih-zlorab-otrok-pedofili-izkoriscajo-tabuje"
+                      class="blob">Peter Lovšin: Neža Miklič, dolgoletna preiskovalka spolnih zlorab otrok: Pedofili
+                      izkoriščajo tabuje. Dnevnik, 2. 12. 2015.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://jazsemvredu.si/forum/nase-otrostvo/kam-nas-pripeljejo-zlorabe-v-otrostvu-t64.html"
+                      class="blob">Kam nas pripeljejo zlorabe v otroštvu. Forum jazsemvredu, 26. 6. 2010.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://www.delo.si/novice/kronika/vsaka-peta-otroska-zrtev-spolne-zlorabe-stara-manj-kot-sedem-let.html"
+                      class="blob">Mihael Korsika: Vsaka peta otroška žrtev spolne zlorabe na internetu stara manj kot
+                      sedem let. Delo, 29. 9. 2016.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://www.milenamatko.com/spolne-zlorabe"
+                      class="blob">Milena Matko: Spolne zlorabe. Pot srca, 20. 2. 2017.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://govori.se/dogodki/spolno-zlorabljanje-otrok-ne-sme-ostati-tabu/" class="blob">Tanja
+                      Šket: Spolno zlorabljanje otrok ne sme ostati tabu! Govori.se, 16. 11. 2015.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://www.portalplus.si/2855/o-katoliski-cerkvi-in-pedofiliji" class="blob">Dejan
+                      Steinbuch: Katoliška cerkev na Slovenskem in vprašanje pedofilije med duhovščino. Portal Plus, 19.
+                      8. 2018.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://www.onaplus.si/pedofilske-mreze-scitijo-najvplivnejsi-politiki" class="blob">Katja
+                      Cah: Pedofilske mreže ščitijo najvplivnejši politiki. OnaPlus, 30. 8. 2017.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://www.began.si/2018/02/16/pedofilski-obroc-okoli-papeza-franciska-se-zateguje"
+                      class="blob">Vlado Began: Pedofilski obroč okoli papeža Frančiška se zateguje. Cerkveno kritične
+                      knjige, 16. 2. 2018.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://www.spletno-oko.si/novice/moj-mikro-o-pedofiliji" class="blob">Moj Mikro o
+                      pedofiliji. Spletno oko, 4. 1. 2010.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://slo-tech.com/novice/t586654"
+                      class="blob">Matej Huš: Nizozemski raziskovalci z virtualno deklico odkrili več tisoč spletnih
+                      pedofilov. SloTech, 6. 11. 2013.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://casoris.si/kako-govoriti-o-neprimernih-dotikih" class="blob">Sonja: Kako govoriti o
+                      neprimernih dotikih. Časoris, 12. 6. 2016.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://www.b92.net/zdravlje/vesti.php?yyyy=2018&amp;mm=10&amp;dd=04&amp;nav_id=1451777"
+                      class="blob">Zlostavljanje dečaka ostavlja ožiljke u njihovom DNK, pokazala studija. B92, 4. 10.
+                      2018.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://www.delo.si/novice/slovenija/spolna-zloraba-ni-le-zlo-je-zlocin.html?iskalnik=Katarina%20Matko&amp;PHPSESSID=1f8a2012c4080f5009fb1e8529bb0ff1"
+                      class="blob">Maja Fabjan: Spolna zloraba ni le zlo, je zločin. Delo 17. 11. 2015.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://localhost:5500/assets/doc/03-2017-preprecevanjeinprepoznavanjespolnihzlorabotrok.pdf"
+                      class="blob">DNK: Preprečevanje in prepoznavanje spolnih zlorab otrok. Najpogostejša vprašanja in
+                      odgovori nanje., Publikacija, 2016.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://localhost:5500/assets/doc/04-2015-svetovalnicazazrtvespolneganasilja.pdf"
+                      class="blob">DNK: Oglas za svetovalnico, 2018.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://localhost:5500/assets/doc/05-UNI_Osojnik_Vesna_2011spolne%20zlorabe.pdf"
+                      class="blob">Vesna Osojnik: Spolna zloraba otrok. Diplomsko delo, 2011.</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="b7865n25">
+              <div class="b7865n22">
+                <h2 class="subtitle is-3">Video vsebine</h2>
+                <div class="video-library">
+                  <section class="video">
+                    <div class="video-grid b7865n222">
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/bc9i0T_9PL4.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Svet Evrope: Kiko in roka.</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/fxb_8JMWJkk.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Svet Evrope: Povej nekomu, ki mu zaupaš.</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/J19lRLb-wwY.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Miti o spolni zlorabi, v katere verjamemo, 1.</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/T2pSkJ37KPY.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Miti o spolni zlorabi, v katere verjamemo, 2.</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/CWfJUSHNsvU.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Otroka krepi informacija</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/E-5STlOkHLo.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Spletno oko:Posnetki spolnih zlorab otrok - za vedno prikazana spolna zloraba</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/gBUXBja98KU.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Neža Miklič: kampanja "Reci ne nasilju"</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/M9Go2-Dxxx0.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Infodrom: Spletne zlorabe</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/9nfaQbRYSNg.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Robova in Sueina zgodba: Posnetki spolne zlorabe so po 15 letih še vedno na spletu.</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/iA4Xg95SdyE.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Novo je, da sem bila zlorabljena - Incest Trauma Centar, Beograd</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/fIgU-cpgh_4.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Incest Trauma Centar - Beograd, Hajde da pričamo o seksualnom nasilju</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/0I2gVdBmA-s.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>Committee for Children: How to Talk with Kids About Sexual Abuse.</p>
+                      </div>
+                      <div class="video-item video-wrap b7865n223"><iframe src="learn_files/SBMvevd9BrU.htm"
+                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen="allowfullscreen" class="b7865n224" frameborder="0"></iframe>
+                        <p>ECPAT: Stop sexual exploitation of a child.</p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <ul class="b7865n23">
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://4d.rtvslo.si/arhiv/odmevi/134820142"
+                      class="blob">Spolne zlorabe otrok se dogajajo večkrat, kot si mislimo. RTV 4D, 24. 4. 2012.</a>
+                  </li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://4d.rtvslo.si/arhiv/dosje/134819078"
+                      class="blob">Jelena Aščić: Nikomur ne smeš povedati. RTV 4D, 24. 4. 2012.</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="https://4d.rtvslo.si/arhiv/dobro-jutro/174591911" class="blob">Spolne zlorabe otrok RTV 4D
+                      29. 1. 2019</a></li>
+                </ul>
+              </div>
+            </div>
+          </column>
+        </columns>
+      </div>
+    </section>
+    <footer class="footer b7865n212">
+      <div class="footer-content b7865n213">
+        <section class="organization b7865n214">
+          <div class="subtitle is-5">Organizatorji</div>
+          <ul>
+            <li>Društvo PuP</li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.mdj.si/" class="blob">Mladinski dom
+                Jarše</a></li>
+          </ul>
+        </section>
+        <section class="participants b7865n214">
+          <div class="subtitle is-5">Sodelujoči</div>
+          <ul>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://zdruzenje-sezam.si/sezam"
+                class="blob">Združenje SEZAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://www.drustvo-zenska-svetovalnica.si/"
+                class="blob">Ženska svetovalnica</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.sititeater.si/" class="blob">SiTi Teater
+                BTC</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.nika.si/" class="blob">NIKA Records</a>
+            </li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.eusa.eu/projects/voice"
+                class="blob">Voice</a></li>
+          </ul>
+        </section>
+        <section class="supporters b7865n214">
+          <div class="subtitle is-5">Podporniki</div>
+          <ul>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://www.finioglasi.com/" class="blob">FINI
+                oglasi</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.akton.net/.si/" class="blob">Akton
+                d.o.o.</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LepaZoga" class="blob">Lepa
+                Žoga</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://www.slovenia-explorer.com/"
+                class="blob">Slovenia Explorer</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.sportna-loterija.si/"
+                class="blob">Športna loterija</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://www.snaga.si/" class="blob">Snaga
+                Ljubljana</a></li>
+          </ul>
+        </section>
+        <section class="media-support b7865n214">
+          <div class="subtitle is-5">Medijska podpora</div>
+          <ul>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.eventim.si/si"
+                class="blob">Eventim.si</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://info.delo.si/" class="blob">Delo Revije</a>
+            </li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://radiostudent.si/" class="blob">Radio
+                Študent</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://mediabus.si/" class="blob">Media Bus</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://zaslon.si/" class="blob">Zaslon.si</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://tam-tam.si/" class="blob">TAM-TAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.europlakat.si/"
+                class="blob">Europlakat</a></li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+  </is-fullheight>
+</body>
+<style id="stylus-228" type="text/css" class="stylus">
+  /* firefox */
+  * {
+    webkit-scrollbar-color: #565656 #2d2d2d;
+    webkit-scrollbar-width: thin;
+    scrollbar-color: #565656 #2d2d2d;
+    scrollbar-width: thin;
+  }
+
+  /* chrome */
+  ::-webkit-scrollbar {
+    width: 7px;
+    background: #2d2d2d;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #565656;
+  }
+</style>
+
+</html>

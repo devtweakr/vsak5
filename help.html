@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vsak5.live</title>
+  <link rel="stylesheet" href="help_files/style.css">
+  <!-- <link rel="stylesheet" href="debug.css"> -->
+  <link rel="stylesheet" href="help_files/bulma.css">
+  <!-- <script src="./mithril-1.1.6.js"></script> -->
+  <!-- <script src="./bss.js"></script> -->
+  <script src="help_files/feather.js"></script>
+  <style>
+    /* html { box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: inherit; }
+    body,input,button { 
+      font: normal 16px "system-ui", Arial,Verdana;
+      margin: 0;
+    }
+    html, body { height: 100vh; }
+    main { background-color: white; height: 100% } */
+  </style>
+  <style>
+    @keyframes b7865n20 {
+      from {
+        fill: #fff;
+      }
+
+      to {
+        fill: #8f2426;
+      }
+    }
+
+    .b7865n21.b7865n21 {
+      background-color: #ffffff;
+    }
+
+    .b7865n22.b7865n22 {
+      padding: 0 1.5em;
+    }
+
+    .b7865n23.b7865n23 {
+      list-style: disc outside;
+      margin-left: 2em;
+    }
+
+    .b7865n24.b7865n24 {
+      border: 0px;
+      height: 1px;
+      background-color: rgba(255, 154, 59, 1);
+    }
+
+    .b7865n25.b7865n25 {
+      padding: 0px;
+      padding-bottom: 1em;
+    }
+
+    .b7865n26.b7865n26 {
+      list-style: none;
+      margin-left: 1em;
+    }
+
+    .b7865n27.b7865n27 {
+      color: #990000;
+    }
+
+    .b7865n28.b7865n28 {
+      display: flex;
+      position: relative;
+    }
+
+    .b7865n29.b7865n29 {
+      font-weight: 900;
+      font-size: 3em;
+      color: #000000;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (min-width: 801px) {
+      .b7865n29.b7865n29 {
+        font-size: 5em;
+      }
+    }
+
+    .b7865n210.b7865n210 {
+      color: #8f2426;
+    }
+
+    .b7865n211.b7865n211 {
+      position: absolute;
+      font-size: 1.5em;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      opacity: 0;
+      transition: opecity .1s linear;
+    }
+
+    @media (min-width: 801px) {
+      .b7865n211.b7865n211 {
+        font-size: 3.6em;
+      }
+    }
+
+    .b7865n212.b7865n212 {
+      background-color: #ededed;
+    }
+
+    .b7865n213.b7865n213 {
+      display: block;
+      font-size: .9rem;
+      padding: 1em 0;
+      border-bottom: 1px solid #4a4a4a;
+    }
+
+    @media (min-width:801px) {
+      .b7865n213.b7865n213 {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .b7865n213>*+* {
+        padding-top: 2em;
+      }
+    }
+
+    .b7865n214.b7865n214 {
+      height: 100%;
+    }
+
+    .b7865n215.b7865n215 {
+      background-color: #ffffff;
+      padding-bottom: 3em;
+    }
+
+    .b7865n216.b7865n216 {
+      padding: 1.5em;
+    }
+
+    .b7865n217.b7865n217 {
+      padding: 0px;
+    }
+
+    .b7865n218.b7865n218 {
+      margin-left: none;
+    }
+
+    .b7865n219.b7865n219 {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .b7865n220.b7865n220 {
+      font-size: .75rem;
+      color: #666666;
+    }
+
+    .b7865n221.b7865n221 {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <script>
+    
+    
+    /*
+    *   Some handy utilities for use in view()s
+    */
+    
+    function linkto(href){
+      return {href: href, oncreate: m.route.link};
+    }
+    
+    function bindProp(obj, propName){
+      return {
+        oninput: m.withAttr("value", function(v){
+          obj[propName] = v;
+        }),
+        value: obj[propName],
+      };
+    }
+    
+    b.helper('measure', b.maxWidth("30em"))
+    b.helper('measureWide', b.maxWidth("34em"))
+    b.helper('measureNarrow', b.maxWidth("20em"))
+    
+    MainComp = function() {
+      function oninit() {
+      }
+      function view(vnode) {
+        return m("main"+b.display("grid").gridTemplateRows("70px 70px 1fr 70px"), [
+        m("i[data-feather='menu']"+b.position("absolute").top(27).right(10)),
+        m("header"+b.display("flex").jc("center").tt("uppercase"),
+        m("h1"+b.fontWeight(900), "Vsak peti otrok")),
+        m("nav"+b.display("flex").flexDirection("column").jc("center").jc("space-around").alignContent("center").bc("salmon")
+        .lineHeight(70)
+        .$nest("a", b.color("#fff"))
+        .$media('(min-width:801px)',
+        b.flexDirection("row"))
+        ,[
+        //m("a", linkto("/article"), "Article list"),
+        m("a", linkto("/article"), "Poslanstvo"),
+        m("a", linkto("/article"), "Pomoč"),
+        m("a", linkto("/article"), "Zgodbe"),
+        m("a", linkto("/article"), "Izobraževanje"),
+        ]),
+        m("section"+b.display("flex").jc("center"), vnode.children),
+        m("footer"+b.bc("#d2d4d6"), "&copy bag")
+        ])
+      }
+      return {oninit:oninit, view:view}
+    }
+    Main = MainComp()
+    
+    
+    HomeComp = function(){
+      function oninit(){
+      }
+      
+      function view(){
+        return m("main" + b.display("flex").jc("center").ai("center").flexDirection("column"),
+        [
+        m("h1"+ b.color("#111111").fontSize("3em"), "Stran začne obratovati 15.12.2018"),
+        m("img", { src: "./assets/vsak5_CoverPhoto.jpg", style: { width: '100%' } })
+        ]
+        //m("img", { src: "./assets/vsak5_ProfilePhoto.jpg", style: { width: '100%', height: '200px' } })
+        //m("img", { src: "./assets/vsak5_CoverPhoto.jpg" })
+        )
+      }
+      
+      return {oninit:oninit, view:view}
+      
+    }
+    
+    var Article = {
+      view: function(vnode) {
+        return m(Main, m("article"+b.measure, "This is article " + vnode.attrs.articleid))
+      }
+    }
+    
+    m.route(document.body, "/article/:articleid", {
+      '/': HomeComp(),
+      '/article/:articleid': Article
+    });
+    
+    feather.replace()
+  </script -->
+
+
+  <script>
+    feather.replace()
+  </script>
+
+  <!-- Code injected by live-server -->
+  <script type="text/javascript">
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    } else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
+
+  <is-fullheight>
+    <div class="title b7865n29">Vsak <span class="b7865n210">5. </span>otrok</div>
+    <div class="boxx b7865n28"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round"
+        stroke-miterlimit="1.414" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"
+        viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"
+        viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"
+        viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"
+        viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" class="show">
+        <path
+          d="M64.775 300H22.626l47.801-130.848-4.886-55.25L0 175.47v-41.1l65.541-59.303h12.438c-12.617-6.832-21.164-19.965-21.164-35.031C56.815 17.939 75.203 0 97.85 0c.557 0 1.124.011 1.681.033h.001A42.933 42.933 0 0 1 101.214 0c22.647 0 41.035 17.939 41.035 40.036 0 15.066-8.548 28.199-21.164 35.031h12.437L200 134.37v41.1l-66.478-61.568-4.885 55.25L176.438 300h-42.149l-34.757-75.926v.001l-.001-.001L64.775 300z">
+        </path>
+      </svg><span id="title" class="b7865n211">Je žrtev spolne zlorabe</span></div>
+    <nav class="navbar">
+      <div class="navbar-menu is-active"><a href="index.html" class="navbar-item is-uppercase">Poslanstvo</a><a
+          href="help.html" class="navbar-item is-uppercase">Pomoč</a><a href="learn.html"
+          class="navbar-item is-uppercase">Izobraževanje</a></div>
+    </nav>
+    <section class="section">
+      <div class="container b7865n21">
+        <columns>
+          <column>
+            <div class="tile is-parent has-text-centered">
+              <h1 class="title is-size-2 is-uppercase tile is-child is-12">Kako ukrepati</h1>
+            </div>
+            <div class="tile is-parent">
+              <div class="tile is-child b7865n22">
+                <h2 class="subtitle is-3">Kako ukrepati v primeru suma zlorabe?</h2>
+                <p>
+                  <ul class="b7865n23">
+                    <li>Ne jezite se na otroka.</li>
+                    <li>Ne dajte mu vtisa, da je storil kaj narobe.</li>
+                    <li>Ne zaslišujte ga.</li>
+                    <li>Vprašajte, kaj se je zgodilo, kje in s kom, ne pa tudi zakaj.</li>
+                    <li>Pred njim se ne vznemirjajte. Otroci se hitro počutijo krive, zaradi česar težko spregovorijo.
+                    </li>
+                    <li>Ne sklepajte prehitro, še posebej če so informacije skope ali nejasne.</li>
+                    <li>Otroku
+                      zagotovite, da boste ukrepali. Obrnite se na osebo, ki lahko pomaga, na
+                      primer na psihologa, zdravnika, socialnega delavca ali policijo.</li>
+                  </ul>
+                </p>
+                <hr class="b7865n24">
+              </div>
+            </div>
+            <div class="tile is-parent b7865n25">
+              <div class="tile is-child b7865n22">
+                <h2 class="subtitle is-3">Na koga se obrniti</h2>
+                <ul class="b7865n26">
+                  <li>
+                    <div class="title is-size-5">Policija <span class="b7865n27">113</span> ali 080 1200</div>
+                  </li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://www.drustvo-sos.si/" class="blob">SOS
+                      telefon (080 1155)</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://www.e-tom.si/" class="blob">TOM telefon
+                      (116 111)</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.drustvo-dnk.si/"
+                      class="blob">Društvo za nenasilno komunikacijo (01 4344822 v Ljubljani ali 05 6393170 in 031
+                      546098 v Kopru)</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://www.drustvo-zenska-svetovalnica.si/"
+                      class="blob">Ženska svetovalnica (031 233211)</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://fdinstitut.si/"
+                      class="blob">Frančiškanski družinski inštitut (01 2006760 ali 040 863986)</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://www.luninavila.si/" class="blob">Lunina
+                      vila</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://www.beliobroc.si/" class="blob">Beli
+                      obroč Slovenije</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer"
+                      href="http://spolna-zloraba.si/index.php/dejavnosti-2/breplacni-telefon" class="blob">Združenje
+                      proti spolnemu zlorabljanju (080 2880)</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://www.spletno-oko.si/" class="blob">Kam
+                      prijaviti nezakonite vsebine</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="http://www.safe.si/" class="blob">Center za
+                      varnejši internet</a></li>
+                </ul>
+              </div>
+            </div>
+          </column>
+        </columns>
+      </div>
+    </section>
+    <footer class="footer b7865n212">
+      <div class="footer-content b7865n213">
+        <section class="organization b7865n214">
+          <div class="subtitle is-5">Organizatorji</div>
+          <ul>
+            <li>Društvo PuP</li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.mdj.si/" class="blob">Mladinski dom
+                Jarše</a></li>
+          </ul>
+        </section>
+        <section class="participants b7865n214">
+          <div class="subtitle is-5">Sodelujoči</div>
+          <ul>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://zdruzenje-sezam.si/sezam"
+                class="blob">Združenje SEZAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://www.drustvo-zenska-svetovalnica.si/"
+                class="blob">Ženska svetovalnica</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.sititeater.si/" class="blob">SiTi Teater
+                BTC</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.nika.si/" class="blob">NIKA Records</a>
+            </li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.eusa.eu/projects/voice"
+                class="blob">Voice</a></li>
+          </ul>
+        </section>
+        <section class="supporters b7865n214">
+          <div class="subtitle is-5">Podporniki</div>
+          <ul>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://www.finioglasi.com/" class="blob">FINI
+                oglasi</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.akton.net/.si/" class="blob">Akton
+                d.o.o.</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LepaZoga" class="blob">Lepa
+                Žoga</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://www.slovenia-explorer.com/"
+                class="blob">Slovenia Explorer</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.sportna-loterija.si/"
+                class="blob">Športna loterija</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://www.snaga.si/" class="blob">Snaga
+                Ljubljana</a></li>
+          </ul>
+        </section>
+        <section class="media-support b7865n214">
+          <div class="subtitle is-5">Medijska podpora</div>
+          <ul>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.eventim.si/si"
+                class="blob">Eventim.si</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://info.delo.si/" class="blob">Delo Revije</a>
+            </li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://radiostudent.si/" class="blob">Radio
+                Študent</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://mediabus.si/" class="blob">Media Bus</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://zaslon.si/" class="blob">Zaslon.si</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="http://tam-tam.si/" class="blob">TAM-TAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.europlakat.si/"
+                class="blob">Europlakat</a></li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+  </is-fullheight>
+</body>
+<style id="stylus-228" type="text/css" class="stylus">
+  /* firefox */
+  * {
+    webkit-scrollbar-color: #565656 #2d2d2d;
+    webkit-scrollbar-width: thin;
+    scrollbar-color: #565656 #2d2d2d;
+    scrollbar-width: thin;
+  }
+
+  /* chrome */
+  ::-webkit-scrollbar {
+    width: 7px;
+    background: #2d2d2d;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #565656;
+  }
+</style>
+
+</html>
